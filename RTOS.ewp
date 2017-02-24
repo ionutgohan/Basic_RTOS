@@ -1956,7 +1956,7 @@
         <name>$PROJ_DIR$\OS\src\List.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\Sources\OS.c</name>
+        <name>$PROJ_DIR$\OS\src\OS.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\OS\src\Port.c</name>
