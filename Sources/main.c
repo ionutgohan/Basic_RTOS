@@ -47,6 +47,13 @@ void foo3(void *params)
   }
 }
 
+const OS_ScheduledTasksListType OS_scheduledTaskList[] = {
+  {1, foo3, 0, 512, 10},
+  {2, foo2, 0, 512, 10},
+  {3, foo1, 0, 512, 10},
+  {.pMainHandler = NULL_PTR}   /* must ALWAYS be the last entry */
+};
+
 int main(void)
 { 
   SystemInit();
@@ -55,12 +62,6 @@ int main(void)
   
   OS_Init();
   
-  Task_Create(1, foo1, 0, 512, 10);
-  
-  Task_Create(2, foo2, 0, 512, 10);
-  
-  Task_Create(3, foo3, 0, 512, 10);
-
   OS_StartScheduler();
 
   while (1);
